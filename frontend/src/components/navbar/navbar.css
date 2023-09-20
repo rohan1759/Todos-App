@@ -1,0 +1,26 @@
+.navbar_main-div{
+    /* height: 100vh; */
+    width: fit-content;
+    background-color: aqua;
+    /* box-sizing: border-box; */
+}
+
+.navbar_main-div_ul{
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 3rem;
+    list-style: none;
+    background-color: #6fc7e4;
+    /* background-color: rgb(163, 199, 199); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar_main-div_ul > div > li{
+    padding: 1.2rem 0rem;
+    font-size: 20px;
+}
+.navbar_main-div_ul > div > li > button{
+    font-size: 20px;
+}

@@ -1,0 +1,39 @@
+.searchSection_maindiv{
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 28px;
+    box-sizing: border-box;
+    /* background-color: #eff1f2; */
+    padding: 0.8rem 0px;
+    border-bottom: 1px solid;
+    margin-bottom: 0.5rem;
+}
+
+.searchSection_maindiv > div {
+    font-family: 'Roboto', 'sans-serif';
+    margin-right: 2.2rem;
+    color: rgb(117, 117, 117);
+}
+
+.searchSection_maindiv > div > span {
+    font-size: 16px;
+    color: rgb(117, 117, 117);
+}
+
+.searchSection_maindiv > div > select{
+    width: 12rem;
+    font-size: 19px;
+    margin-left: 0.4rem;
+    padding: 0.6rem 0.5rem;
+    background-color: white;
+    color: rgba(88, 88, 88, 0.9);
+}
+
+.searchSection_maindiv > div > select > option{
+    padding: 5px 8px;
+    background-color: white;
+}
+.searchSection_maindiv > div > select > option:hover{
+    background-color: rgb(117, 117, 117);
+}
