@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './addtodo.css'
 
-const Addtodo = () => {
+const Addtodo = ({userEmail}) => {
   const [newTodo, setNewTodo] = useState({
     title: "",
     dueDate: ""
@@ -15,13 +15,14 @@ const Addtodo = () => {
   const handleSubmit = async (event) => {
     try{
       event.preventDefault();
-      const response = await fetch("http://localhost:8080/api/todos/ram@gmail.com", {
+      const response = await fetch(`http://localhost:8080/api/todos/${userEmail}`, {
       method: "POST",
       body: JSON.stringify(newTodo),
       headers: { "Content-Type": "application/json" }
     })
     const res = await response.json()
     console.log(res)
+    window.location.reload()
     }
     catch(err){
       console.log(err)

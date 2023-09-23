@@ -22,7 +22,7 @@ const Content = ({data, setData}) => {
 
   return (
     <div className="content_main-div">
-        {data.map((d) => {
+        {data.length != 0 ? data.map((d) => {
           return (
             <Tile
               key={d._id}
@@ -35,7 +35,11 @@ const Content = ({data, setData}) => {
               handleComplete={handleComplete}
             />
           );
-        })}
+        }) : <>
+            <h1>NO TODO</h1>
+            <h5>either <u>LOGIN</u> or <u>ENTER CORRECT EMAIL</u></h5>
+        </>
+        }
     </div>
   );
 };

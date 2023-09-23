@@ -4,7 +4,6 @@ const Todos = model.Todos
 
 exports.get = async (req, res) => {
     const created = req.query.sort
-    console.log(req.query)
     if(created == "createdAt"){
         const data = await Todos.find({email: req.params.email}).sort({createdAt: -1})
         res.json(data)
