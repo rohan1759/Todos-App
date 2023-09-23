@@ -3,15 +3,19 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const userRouter = require('./routes/user')
+const todosRouter = require('./routes/todos')
+const bodyParser = require('body-parser');
 
 const server = express()
 
 //useful middlewares
 server.use(cors())
 server.use(express.json())
+server.use(bodyParser.json());
 
 //routes
 server.use("/api/user", userRouter.router)
+server.use("/api/todos", todosRouter.router)
 
 
 //  MONGO-DB CONNECTOR CODE 
