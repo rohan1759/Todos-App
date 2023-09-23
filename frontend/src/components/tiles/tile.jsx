@@ -20,7 +20,7 @@ const Tile = ({title, status, dueDate, createdAt, handleDelete, handleComplete})
               <FcCheckmark id='complete_mark' title='completed' size={"2rem"} onClick={()=>handleComplete(title)} />
               <FcCancel id='delete_mark' value={title} title='delete' size={"1.8rem"} onClick={() => handleDelete(title)} />
             </div>
-            <div title='created-at'>{<FcInfo/>}{createdAt.split("T")[0]}</div>
+            <div id='creationDate' title='created-at'>{<FcInfo/>}{createdAt.split("T")[0]}</div>
           </div>
         </div>
     </div>
