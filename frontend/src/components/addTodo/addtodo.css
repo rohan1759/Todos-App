@@ -1,0 +1,124 @@
+.addtodo_maindiv{
+    margin: 1rem;
+    padding: 0.5rem;
+    width: 95%;
+    display: flex;
+    justify-content: center; 
+}
+.addtodo_maindiv > form{
+    background-color: white;
+    box-shadow: 0px 1px 6px 1px rgba(143, 143, 143, 0.5);
+    width: calc(100vw - 50px);   
+    display: flex;
+    padding: 1.8rem 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+#text_input{
+    width: 70%;
+    font-size: 18px;
+    padding: 0.4rem 0.5rem;
+    outline: none;
+    border: none;
+    word-wrap: break-word;
+}
+
+.addtodo_maindiv > form > div {
+    width: 17%;
+    display: flex;
+    align-items: center;
+}
+
+#date_input{
+    border: none;
+   font-size: 23px;
+   /* padding: 0.2rem 0.4rem; */
+    width: 28px;
+}
+
+.addtodo_maindiv > form > div > button{
+    font-size: 15px;
+    /* width: 2rem; */
+    text-transform: uppercase;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    margin-left: 0.6rem;
+    background-color: #3b71ca;
+    border: none;
+    font-family: sans-serif;
+    border-radius: 6px;
+    box-shadow: 0px 0px 3px 0px #719adc;
+}
+
+@media screen and (max-width: 700px) {
+    .addtodo_maindiv{
+        margin: 0.2rem;
+        padding: 0.4rem;
+        width: 90%;
+        display: flex;
+        justify-content: center; 
+    }
+    
+    .addtodo_maindiv > form{
+        background-color: white;
+        box-shadow: 0px 1px 6px 1px rgba(143, 143, 143, 0.5);
+        width: calc(88vw - 50px);   
+        display: flex;
+        padding: 0.2rem 0.6rem;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+    }
+    
+    .addtodo_maindiv > form > div > button{
+        font-size: 14px;
+        /* width: 2rem; */
+        text-transform: uppercase;
+        color: white;
+        padding: 0.2rem 0.4rem;
+        margin-left: 0.6rem;
+        background-color: #3b71ca;
+        border: none;
+        font-family: sans-serif;
+        border-radius: 6px;
+        box-shadow: 0px 0px 3px 0px #719adc;
+    }
+    #text_input{
+        width: 70%;
+        font-size: 16px;
+        padding: 0.4rem 0.5rem;
+        outline: none;
+        border: none;
+        word-wrap: break-word;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #text_input{
+        width: 70%;
+        font-size: 12px;
+        padding: 0.4rem 0rem;
+        outline: none;
+        border: none;
+        word-wrap: break-word;
+    }
+    .addtodo_maindiv > form > div > button{
+        font-size: 10px;
+        /* width: 2rem; */
+        text-transform: uppercase;
+        color: white;
+        padding: 0.2rem 0.4rem;
+        margin-left: 0.6rem;
+        background-color: #3b71ca;
+        border: none;
+        font-family: sans-serif;
+        border-radius: 6px;
+        box-shadow: 0px 0px 3px 0px #719adc;
+    }
+    #date_input{
+        border: none;
+        font-size: 22px;
+        width: 26px;
+    }
+}

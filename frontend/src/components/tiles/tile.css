@@ -1,0 +1,41 @@
+.tile_main-div{
+    width: calc(100% - 30px);
+    border-radius: 5px;
+    /* background-color: #eeeeee; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0rem;
+    margin: 0.6rem 0rem;
+    border-left: 2px double red;
+    border-bottom: 1px dashed;
+}
+
+.tile_main-div_title{
+    flex: 6;
+    font-variant: small-caps;
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+}
+
+.tile_main-div_date{
+    flex: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1rem;
+}
+
+#tile_main-div_date_dueDate{
+    border: 2px double rgb(212, 49, 82);
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 0.2rem 0.5rem;
+    background-color: #fff;
+}
+
+#tile_main-div_date_info{
+    align-content: end;
+    font-size: 10px;
+    text-align: right;
+}
