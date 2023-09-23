@@ -11,14 +11,14 @@ const Tile = ({title, status, dueDate, createdAt, handleDelete, handleComplete})
           {title}
         </div>
         <div className='tile_main-div_date'>
-          <div style={{ color: status === 'pending' ? 'red' : 'green' }}>{status}</div>
+          <div style={{ color: status === 'pending' ? 'red' : 'green' }} id='todo_status'>{status}</div>
           <div id='tile_main-div_date_dueDate' title='deadline'>
             {<LuTimer/>} {dueDate.split("T")[0]}
           </div>
           <div id='tile_main-div_date_info'>
             <div>
-              <FcCheckmark title='completed' size={"2rem"} onClick={()=>handleComplete(title)} />
-              <FcCancel value={title} title='delete' size={"1.8rem"} onClick={() => handleDelete(title)} />
+              <FcCheckmark id='complete_mark' title='completed' size={"2rem"} onClick={()=>handleComplete(title)} />
+              <FcCancel id='delete_mark' value={title} title='delete' size={"1.8rem"} onClick={() => handleDelete(title)} />
             </div>
             <div title='created-at'>{<FcInfo/>}{createdAt.split("T")[0]}</div>
           </div>
