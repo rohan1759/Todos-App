@@ -14,7 +14,7 @@ const App = () => {
   let myemail = sessionStorage.getItem('userEmail');
 
   async function getData(){
-    const response = await fetch(`http://localhost:8080/api/todos/${myemail}?sort=${'createdAt'}`)
+    const response = await fetch(`https://todos-app-backend-p2bbc7dlo-rohan1759.vercel.app/api/todos/${myemail}?sort=${'createdAt'}`)
     const res = await response.json()
     setData(res)
   }

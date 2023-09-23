@@ -5,20 +5,24 @@ import Tile from "../tiles/tile";
 const Content = ({data, setData}) => {
 
   const handleComplete = (id) => {
-    fetch("http://localhost:8080/api/todos/", {method: "PATCH" , headers: {"todoid": id}})
-      .then((data) => console.log(data))
+    fetch("https://todos-app-backend-p2bbc7dlo-rohan1759.vercel.app/api/todos/", {method: "PATCH" , headers: {"todoid": id}})
+      .then((data) => {
+        console.log(data)
+        window.location.reload()
+      })
+
   }
 
   const handleDelete = async (id) => {
     const newTodo = data.filter((l) => l.title !== id)
     setData(newTodo)
-    fetch("http://localhost:8080/api/todos/", {method: "DELETE" , headers: {"deleteid": id}})
+    fetch("https://todos-app-backend-p2bbc7dlo-rohan1759.vercel.app/api/todos/", {method: "DELETE" , headers: {"deleteid": id}})
       .then((data) => console.log(data))
   }
   
-  setTimeout(() => {
-    console.log(1, data)
-  }, 1000);
+  // setTimeout(() => {
+  //   console.log(1, data)
+  // }, 1000);
 
   return (
     <div className="content_main-div">

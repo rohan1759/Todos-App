@@ -28,7 +28,7 @@ const Signup = ({isLoggedIn}) => {
     const handleSubmit = async (event) => {
       event.preventDefault();
       try {
-        const response = await fetch("http://localhost:8080/api/user/", {
+        const response = await fetch("https://todos-app-backend-p2bbc7dlo-rohan1759.vercel.app/api/user/", {
           method: "POST",
           body: JSON.stringify(signupForm),
           headers: { "Content-Type": "application/json" }

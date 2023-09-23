@@ -9,13 +9,13 @@ const Addtodo = ({userEmail}) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target
-    console.log(event.target, event.target.value)
+    // console.log(event.target, event.target.value)
     setNewTodo((prevData)=> ({...prevData, [name]: value}))
   }
   const handleSubmit = async (event) => {
     try{
       event.preventDefault();
-      const response = await fetch(`http://localhost:8080/api/todos/${userEmail}`, {
+      const response = await fetch(`https://todos-app-backend-p2bbc7dlo-rohan1759.vercel.app/api/todos/${userEmail}`, {
       method: "POST",
       body: JSON.stringify(newTodo),
       headers: { "Content-Type": "application/json" }
