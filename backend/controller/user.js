@@ -11,7 +11,6 @@ exports.add = (req, res) => {
             console.error(errorMessage, err);
             res.status(406).json({ error: errorMessage });
         })
-        // .catch(err => res.json(err))
         
 }
 
