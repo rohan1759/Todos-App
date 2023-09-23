@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './app.css'
+import './App.css'
 import Content from "./components/content/content"
 import Addtodo from './components/addTodo/addtodo'
 import SearchSection from './components/searchSection/searchSection'
