@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import './auth.css'
 
 const Signup = ({isLoggedIn}) => {
     const [signupForm, setSignupForm] = useState({
@@ -50,13 +51,16 @@ const Signup = ({isLoggedIn}) => {
     };
     
   return (
-    <div>
-        {islogin===false ? <form onSubmit={handleSubmit}>
-            <span>QUICK SIGNUP FORM </span>
+    <div className='signup_mainDiv'>
+        {islogin===false ? <><form onSubmit={handleSubmit}>
+            <span>Quick SignUp Form </span>
             <input name='name' type='text' placeholder='name' onChange={handleChange} required ></input>
             <input name='email' type='text' placeholder='email' onChange={handleChange} required ></input>
             <button type='submit'>register</button>
-        </form>: <></>}
+        </form>
+        <div>or</div>
+        </>
+: <></>}
         <ToastContainer  autoClose={3000}/>
     </div>
   )

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './auth.css'
 
 const Login = ({ isLoggedIn, setIsLoggedIn, userEmail, setUserEmail }) => {
     const [emailInput, setEmailInput] = useState('');
@@ -30,7 +31,7 @@ const Login = ({ isLoggedIn, setIsLoggedIn, userEmail, setUserEmail }) => {
     }
 
   return (
-    <div>
+    <div className='login_mainDiv'>
         {islogin===false ? <form>
             <span>LOGIN </span>
             <input type='text' placeholder='email' onChange={handleEmailChange} required ></input>

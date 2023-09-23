@@ -28,8 +28,10 @@ const App = () => {
   return (
     <div className="app_main-div">
       <div>
+        <div className='auth_mainDiv'>
         <Signup isLoggedIn={isLoggedIn} />
         <Login userEmail={userEmail} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setUserEmail={setUserEmail} />
+        </div>
         <Addtodo userEmail={myemail} />
         <SearchSection data={data} setData={setData}/>
         <Content data={data} setData={setData} />
